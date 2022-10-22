@@ -12,8 +12,8 @@ This app will simply display all your Phone Contacts data..
 
 # Pictures
 <p float="left">
- <img src="https://github.com/aliahmad3937/PhoneContacts/tree/master/art/contact.jpg" width="150" height="280">
-<img src="https://github.com/aliahmad3937/PhoneContacts/tree/master/art/contactDetail.jpg" width="150" height="280">
+ <img src="https://github.com/aliahmad3937/PhoneContacts/blob/master/art/contact.jpeg" width="150" height="280">
+<img src="https://github.com/aliahmad3937/PhoneContacts/tree/master/art/contactDetail.jpeg" width="150" height="280">
 </p>
 
 
