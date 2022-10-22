@@ -5,7 +5,7 @@ This app will simply display all your Phone Contacts data..
 - MVVM Clean Architecture
 - Read Contact Use Case
 - Data binding
-- Permissions Handling
+- Search Contact either by name or number
 
 
 
