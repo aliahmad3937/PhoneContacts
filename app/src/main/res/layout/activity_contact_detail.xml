@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="contact"
+            type="com.cc.phonecontacts.model.Contact" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="15dp"
+        tools:context=".ui.contacts.ContactDetailActivity">
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/details"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_22sp"
+            android:paddingVertical="@dimen/_15dp"
+            android:drawablePadding="@dimen/_5dp"
+            android:drawableStart="@drawable/ic_baseline_arrow_back_ios_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.github.ramiz.nameinitialscircleimageview.NameInitialsCircleImageView
+            android:id="@+id/initialsCircleImageView"
+            android:layout_width="@dimen/_84dp"
+            android:layout_height="@dimen/_84dp"
+            android:layout_marginTop="@dimen/_60dp"
+            app:circleBackgroundColor="@color/purple_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/back"
+            app:text="RR"
+            app:textSize="@dimen/_20sp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{contact.name}"
+            android:layout_marginTop="@dimen/_10dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sp"
+            app:layout_constraintEnd_toEndOf="@+id/initialsCircleImageView"
+            app:layout_constraintStart_toStartOf="@+id/initialsCircleImageView"
+            app:layout_constraintTop_toBottomOf="@+id/initialsCircleImageView" />
+
+        <TextView
+            android:id="@+id/tv_gmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_60dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sp"
+            android:drawableStart="@drawable/ic_gmail"
+            android:drawablePadding="@dimen/_10dp"
+            android:text="@{contact.gmail}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_20sp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sp"
+            android:drawableStart="@drawable/ic_baseline_phone_24"
+            android:drawablePadding="@dimen/_10dp"
+            android:text="@{contact.mobileNumber}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_gmail" />
+
+        <TextView
+            android:id="@+id/tv_dob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sp"
+            android:drawableStart="@drawable/birthday"
+            android:drawablePadding="@dimen/_10dp"
+            android:text="@{contact.dob}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_number" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

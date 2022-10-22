@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Contacts</string>
+    <string name="allow_permission_to_continue">Allow Permission <font color='#014487'><u>To Continue!</u></font></string>
+    <string name="details">Details</string>
+</resources>
