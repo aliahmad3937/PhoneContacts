@@ -6,6 +6,7 @@ This app will simply display all your Phone Contacts data..
 - Read Contact Use Case
 - Data binding
 - Search Contact either by name or number
+- Flow for cold emiting contact
 
 
 
