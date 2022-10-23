@@ -11,10 +11,11 @@ import com.cc.phonecontacts.databinding.ItemContactBinding
 import com.cc.phonecontacts.model.Contact
 import com.github.ramiz.nameinitialscircleimageview.MaterialColorGenerator
 import com.github.ramiz.nameinitialscircleimageview.NameInitialsCircleImageView
+import dagger.Binds
 
 
 class ContactAdapter(
-    private var mList: MutableList<Contact>,
+    var mList: MutableList<Contact>,
     val context: Context,
     val clickListener: (Contact) -> Unit
 ) : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
@@ -29,6 +30,8 @@ class ContactAdapter(
             clickListener(mList[pos])
         }
     }
+
+
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(mList[position])
@@ -73,6 +76,7 @@ class ContactAdapter(
 
         fun bind(model: Contact) {
             binding.displayName = model.name
+            binding.executePendingBindings()
 
                 val imageInfo = NameInitialsCircleImageView.ImageInfo
                     .Builder("${model.name?.get(0)}")

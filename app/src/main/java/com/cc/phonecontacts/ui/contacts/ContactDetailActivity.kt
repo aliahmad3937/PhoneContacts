@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.cc.phonecontacts.R
 import com.cc.phonecontacts.databinding.ActivityContactDetailBinding
-import com.cc.phonecontacts.databinding.ActivityContactsBinding
 import com.cc.phonecontacts.model.Contact
 import com.github.ramiz.nameinitialscircleimageview.MaterialColorGenerator
 import com.github.ramiz.nameinitialscircleimageview.NameInitialsCircleImageView
